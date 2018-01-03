@@ -1,0 +1,2 @@
+module Api::PuppiesHelper
+end

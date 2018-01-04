@@ -17,3 +17,7 @@
 /yarn-error.log
 
 .byebug_history
+
+asset-manifest.json
+public/index.html
+server/public/*.html

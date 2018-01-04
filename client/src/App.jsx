@@ -5,7 +5,7 @@ import './App.css';
 import puppies from './puppies.json';
 import PuppyCard from './PuppyCard';
 import makeService from './service';
-import Login from './Login';
+import LoginMaker from './Login';
 import Logout from './Logout';
 import Register from './Register';
 
@@ -52,14 +52,7 @@ class App extends Component {
         <NavBar loggedIn={this.state.loggedIn} />
         <div className="container">
           <Switch>
-            <Route
-              path="/login"
-              render={({ history }) => (<Login
-                onLogin={this.onLogin}
-                logIn={this.service.logIn}
-                history={history}
-              />)}
-            />
+            <Route path="/login" component={LoginMaker(this.onLogin, this.service.logIn)} />
             <Route
               path="/register"
               render={({ history }) => (<Register
